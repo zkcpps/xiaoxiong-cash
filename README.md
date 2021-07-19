@@ -12,7 +12,7 @@
 
 * Styled Components
 
-## 发布使用 gh-pages插件，已经发布到github page上面 https://yanhaixiang.com/weixin-cash/#/
+## 发布使用 gh-pages插件，已经发布到github page
 
 
 
