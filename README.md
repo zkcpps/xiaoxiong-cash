@@ -1,6 +1,6 @@
 # 小熊记账本
 
-用 React.js + TypeScript 写的一个仿微信记账本。网站：https://yanhaixiang.com/weixin-cash/#/
+用 React.js + TypeScript 写的一个仿微信记账本。网站：https://zkcpps.github.io/xiaoxiong-cash/
 
 ## 主要技术
 
@@ -12,7 +12,7 @@
 
 * Styled Components
 
-## 发布使用 gh-pages插件，已经发布到github page上面 https://yanhaixiang.com/weixin-cash/#/
+## 发布使用 gh-pages插件，已经发布到github page
 
 
 
