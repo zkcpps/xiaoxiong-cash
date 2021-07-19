@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/xiaoxiong/static/css/main.1fd9c27f.chunk.css",
+    "main.js": "/xiaoxiong/static/js/main.a50dedf0.chunk.js",
+    "main.js.map": "/xiaoxiong/static/js/main.a50dedf0.chunk.js.map",
+    "runtime-main.js": "/xiaoxiong/static/js/runtime-main.45c0dbcf.js",
+    "runtime-main.js.map": "/xiaoxiong/static/js/runtime-main.45c0dbcf.js.map",
+    "static/js/2.6c38c696.chunk.js": "/xiaoxiong/static/js/2.6c38c696.chunk.js",
+    "static/js/2.6c38c696.chunk.js.map": "/xiaoxiong/static/js/2.6c38c696.chunk.js.map",
+    "index.html": "/xiaoxiong/index.html",
+    "precache-manifest.66b91ff8c0973d933fe88b4c046003bc.js": "/xiaoxiong/precache-manifest.66b91ff8c0973d933fe88b4c046003bc.js",
+    "service-worker.js": "/xiaoxiong/service-worker.js",
+    "static/css/main.1fd9c27f.chunk.css.map": "/xiaoxiong/static/css/main.1fd9c27f.chunk.css.map",
+    "static/js/2.6c38c696.chunk.js.LICENSE.txt": "/xiaoxiong/static/js/2.6c38c696.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45c0dbcf.js",
+    "static/js/2.6c38c696.chunk.js",
+    "static/css/main.1fd9c27f.chunk.css",
+    "static/js/main.a50dedf0.chunk.js"
+  ]
+}
