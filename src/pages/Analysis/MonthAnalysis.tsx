@@ -48,7 +48,7 @@ const MonthAnalysis: React.FC<TProps> = (props) => {
 
   // 每月对比
   const months = getPrevMonths()
-  const xData = months.map(m => m.get('month'))
+  const xData = months.map(m => m.get('month') + 1)
   const yData = getYData(months, getMonthRecord)
 
   const monthChartOptions = barChart(xData, yData, type, '月')
