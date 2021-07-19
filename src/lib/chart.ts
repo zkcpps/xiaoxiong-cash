@@ -4,7 +4,6 @@ import {TRecordType} from '../hooks/useRecordList'
 export const barChart = (xData: any[], yData: any[], type: TRecordType, unit: string) => {
   const color = type === 'expense' ? theme.$success : theme.$warning
   const name = type === 'expense' ? '支出' : '收入'
-
   return {
     tooltip: {
       show: true,

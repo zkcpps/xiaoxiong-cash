@@ -26,7 +26,7 @@ const Main = styled.div`
   margin: 0 -24px;
 `
 
-const getYData = (months: Dayjs[], getMonthRecord: Function) => {
+const getYData = (months: Dayjs[], getMonthRecord: Function, type: TRecordType) => {
   return months.map(m => {
     const monthRecord = getMonthRecord(m.format(MONTH))
     // 没有就为 0
@@ -34,8 +34,7 @@ const getYData = (months: Dayjs[], getMonthRecord: Function) => {
 
     // 计算总数
     let total = 0
-    parseMonthRecord(monthRecord).forEach(r => total += r.amount)
-
+    parseMonthRecord(monthRecord).filter(i => i.type === type).forEach(r => total += r.amount)
     return total
   })
 }
@@ -49,7 +48,7 @@ const MonthAnalysis: React.FC<TProps> = (props) => {
   // 每月对比
   const months = getPrevMonths()
   const xData = months.map(m => m.get('month') + 1)
-  const yData = getYData(months, getMonthRecord)
+  const yData = getYData(months, getMonthRecord, type)
 
   const monthChartOptions = barChart(xData, yData, type, '月')
 

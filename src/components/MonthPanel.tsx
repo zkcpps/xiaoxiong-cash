@@ -46,9 +46,14 @@ const MonthItem = styled.li<TMonthItem>`
 `
 
 export const getPrevMonths = () => {
-  const DURATION = 5
+  const DURATION = dayjs().get('month') + 1;
 
   return [...Array(DURATION)].map((_, index) => dayjs().subtract(index, 'month'))
+}
+
+export const getPrevMonths1 = () => {
+  const DURATION = 12
+  return [...Array(DURATION)].map((_, index) => dayjs().subtract(index + dayjs().get('month') + 1, 'month'))
 }
 
 const MonthPanel: React.FC<TProps> = (props) => {
@@ -57,9 +62,12 @@ const MonthPanel: React.FC<TProps> = (props) => {
   const thisYear = dayjs()
   const prevYear = dayjs().subtract(1, 'year')
 
-  const prevMonths = getPrevMonths()
-  const prevYearMonths = prevMonths.filter(m => m.isSame(prevYear, 'year'))
-  const thisYearMonths = prevMonths.filter(m => m.isSame(thisYear, 'year'))
+
+
+  const thisMonths = getPrevMonths()
+  const prevMonths = getPrevMonths1()
+  const prevYearMonths = prevMonths;
+  const thisYearMonths = thisMonths.filter(m => m.isSame(thisYear, 'year'))
 
   const submit = (newMonth: Dayjs) => {
     onSubmit(newMonth)
@@ -92,7 +100,7 @@ const MonthPanel: React.FC<TProps> = (props) => {
           <p>{prevYear.get('year')}</p>
           <MonthList>
             {prevYearMonths.map(m =>
-              <MonthItem selected={m.isSame(value, 'date')}
+              <MonthItem selected={false}
                          key={m.get('month')}
                          onClick={() => submit(m)}>
                 {m.get('month') + 1}月
